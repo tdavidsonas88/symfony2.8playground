@@ -45,14 +45,4 @@ class Person {
     public function setFullname($fullname) {
         $this->fullname = $fullname;
     }
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 }

@@ -24,7 +24,17 @@ class MainController extends Controller
 
         if($request->getMethod() == 'POST') {
             if($form->isValid()){
-                return new Response('Person created!');
+                $email = $form->get('email')->getData();
+                $fullname = $form->get('fullname')->getData();
+
+                $person->setEmail($email);
+                $person->setFullname($fullname);
+
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($person);
+                $em->flush();
+
+                return new Response('Person '.$fullname.'/'.$email.' created!');
             }
             $user = array('name' => 'Tom', 'active' => true);
                 return $this->render('main/index.html.twig', array(
