@@ -2,8 +2,18 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Person {
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Email()
+     */
     protected $email;
+    /**
+     * @Assert\NotBlank()
+     */
     protected $fullname;
 
     public function getEmail() {

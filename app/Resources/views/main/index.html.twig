@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Hello Index</h1>
     
-    {{ form_start(form) }} 
+    {{ form_start(form, { attr: { novalidate: 'novalidate' } }) }} 
         {{ form_row(form.email) }}
         {{ form_row(form.fullname)}}
     {{ form_end(form) }}
