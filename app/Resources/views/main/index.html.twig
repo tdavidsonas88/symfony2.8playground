@@ -2,7 +2,10 @@
 
 {% block body %}
     <h1>Hello Index</h1>
-    {% if user.active %}
-        <p>Hello, {{ user.name }}</p>
-    {% endif %}
+    
+    {{ form_start(form) }} 
+        {{ form_row(form.email) }}
+        {{ form_row(form.fullname)}}
+    {{ form_end(form) }}
+    
 {% endblock %}
