@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hello Index</h1>
+    {% if user.active %}
+        <p>Hello, {{ user.name }}</p>
+    {% endif %}
+{% endblock %}
