@@ -13,7 +13,10 @@ class ParamController extends Controller
      */
     public function helloAction($name)
     {
-        // replace this example code with whatever you need
+        
+        $logger = $this->container->get('logger');
+        $logger->info('Look! I just used the log service');
+
         return $this->render('hello/name.html.twig', [
             'name' => $name,
             'other_name' => 'world',

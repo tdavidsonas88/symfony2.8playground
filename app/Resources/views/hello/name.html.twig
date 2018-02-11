@@ -5,4 +5,12 @@
 
     <p>hi {{ name }}</p>
     <p>also hello {{ other_name }}</p>
+
+    <a href="{{ path('homepage') }}">Home</a>
+
+    {% for i in 1..10 %}
+        <div class="{{ cycle(['even', 'odd'], i) }}">
+            <h2>some html</h2>
+        </div>
+    {% endfor %}
 {% endblock %}
